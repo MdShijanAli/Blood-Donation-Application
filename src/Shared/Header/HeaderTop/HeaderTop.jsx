@@ -22,7 +22,7 @@ const HeaderTop = () => {
             </div>
             <div className='flex gap-2'>
                 <EnvelopeIcon className='h-6 w-6 text-black-500'></EnvelopeIcon>
-                <h3>FREELANCERSHIJAN@GMAIL.COM</h3>
+                <h3><a href="mailto:shijan135@gmail.com"> FREELANCERSHIJAN@GMAIL.COM</a> </h3>
             </div>
                 </div>
 
