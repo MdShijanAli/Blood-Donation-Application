@@ -1,11 +1,11 @@
 import { useContext, useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import logo from '../../assets/images/logoo.png';
+import { Link, NavLink } from 'react-router-dom';
+import logo from '../../assets/images/logo.png';
 import { UserCircleIcon } from '@heroicons/react/24/solid'
 
 import toast from 'react-hot-toast';
 import HeaderTop from './HeaderTop/HeaderTop';
-import './Header.css';
+
 import { AuthContext } from '../../utilities/AuthProvider/AuthProvider';
 
 
@@ -29,12 +29,12 @@ const Header = () => {
         <div>
             <HeaderTop></HeaderTop>
 
-            <nav className="w-full bg-gray-800 shadow sticky top-0 z-50">
-                <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+            <nav className=" bg-white shadow py-4 sticky top-0 z-50">
+                <div className="md:container mx-10 md:mx-auto justify-between  md:items-center md:flex ">
                     <div>
                         <div className="flex items-center justify-between py-3 md:py-2 md:block">
                             <NavLink to='/'>
-                                <img className='h-20' src={logo} alt="" />
+                                <img className='h-14' src={logo} alt="" />
                             </NavLink>
                             <div className="md:hidden">
                                 <button
@@ -44,7 +44,7 @@ const Header = () => {
                                     {navbar ? (
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
-                                            className="w-6 h-6 text-white"
+                                            className="w-6 h-6 text-black"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
                                         >
@@ -57,7 +57,7 @@ const Header = () => {
                                     ) : (
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
-                                            className="w-6 h-6 text-white"
+                                            className="w-6 h-6 text-black"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
@@ -74,143 +74,93 @@ const Header = () => {
                             </div>
                         </div>
                     </div>
-                    <div>
+
+
+
+                    <div className='md:flex gap-10 items-center'>
                         <div
                             className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"
                                 }`}
                         >
-                            <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                                <li className="text-white hover:text-indigo-200">
+                            <ul className="items-center text-lg font-semibold uppercase justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+                                <li className="text-black hover:text-[#0EA5E9]">
                                     <NavLink to='/'>Home</NavLink>
                                 </li>
-                                <li className="text-white hover:text-indigo-200">
-                                    <NavLink to='/services'>Services</NavLink>
+                                <li className="text-black hover:text-[#0EA5E9]">
+                                    <NavLink to='/about-us'>About Us</NavLink>
                                 </li>
-                                <li className="text-white hover:text-indigo-200">
+                                <li className="text-black hover:text-[#0EA5E9]">
+                                    <NavLink to='/campaign'>Compaign</NavLink>
+                                </li>
+                                <li className="text-black hover:text-[#0EA5E9]">
                                     <NavLink to='/blogs'>Blog</NavLink>
                                 </li>
 
-                                <li className="text-white hover:text-indigo-200">
+                                <li className="text-black hover:text-[#0EA5E9]">
                                     <NavLink to='/contact'>Contact</NavLink>
                                 </li>
 
                             </ul>
 
-                            <div className="mt-3 space-y-2 md:hidden ">
-                                <NavLink className="text-white hover:text-indigo-200 " to='/my-reviews'>
-                                    {
-                                        user?.uid && <p className='my-8'>My-Reviews</p>
-                                    }
-                                </NavLink>
-
-                                <NavLink className="text-white hover:text-indigo-200 " to='/add-a-service'>
-                                    {
-                                        user?.uid && <p className='my-8'>Add Service</p>
-                                    }
-                                </NavLink>
-
-                                <NavLink to='/profile'>
-                                    {
-                                        user?.uid && <div>
-
-                                            {
-                                                user?.photoURL ? <img className='w-12 h-12 rounded-full mr-2' alt='profilePhoto' src={user?.photoURL} title={user?.displayName}></img> : <UserCircleIcon title={user?.displayName} className='w-12 h-12 text-white mr-2'></UserCircleIcon>
-                                            }
-                                        </div>
-
-                                    }
-                                </NavLink>
-
-                                {
-                                    user?.uid ? <NavLink onClick={handleLogout}
-
-                                        className="inline-block w-full px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
-                                    >
-                                        Sign Out
-                                    </NavLink> :
-                                        <>
-                                            <NavLink
-                                                to='/login'
-                                                className="inline-block w-full px-4 py-2 text-center text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
-                                            >
-                                                Login
-                                            </NavLink>
-                                            <NavLink
-                                                to='/register'
-                                                className="inline-block w-full px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
-                                            >
-                                                Register
-                                            </NavLink>
-                                        </>
-                                }
-                                {/*                            <div className="form-control">
-                                <label className="label cursor-pointer">
-
-                                    <input type="checkbox" className="toggle toggle-secondary" />
-                                </label>
-                            </div> */}
+                            <div className="mt-10 text-center md:hidden ">
+                                
+                            {
+                            user?.uid ? <Link to='/profile' onClick={handleLogout}>
+                            <div className="avatar">
+                            <div className="w-14 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                          
+                                        <img className='' alt='profilePhoto' src={user?.photoURL} title={user?.displayName}></img> 
+                                
+                                </div>
+                                </div>
+                            </Link> : 
+                                
+                                <Link to='/login'>
+                            
+                                          <div className="avatar">
+                                                   <div className=" rounded-full ring ring-primary ring-offset-base-100 ">
+                                                        <UserCircleIcon  className='w-14 h-14 '></UserCircleIcon>
+                                                  </div>
+                                          </div>
+                                 </Link>
+                        }
+                                
+                                
                             </div>
                         </div>
-                    </div>
-                    <div className="hidden md:flex items-center gap-2">
-
-                        <NavLink className="text-white hover:text-indigo-200" to='/my-reviews'>
-                            {
-                                user?.uid && <p>My-Reviews</p>
-                            }
-                        </NavLink>
-
-                        <NavLink className="text-white hover:text-indigo-200" to='/add-a-service'>
-                            {
-                                user?.uid && <p>Add Service</p>
-                            }
-                        </NavLink>
-
-
-                        <NavLink to='/profile'>
-                            {
-                                user?.uid && <div>
-
-                                    {
-                                        user?.photoURL ? <img className='w-12 h-12 rounded-full mr-2' alt='profilePhoto' src={user?.photoURL} title={user?.displayName}></img> : <UserCircleIcon title={user?.displayName} className='w-12 h-12 text-white mr-2'></UserCircleIcon>
-                                    }
-                                </div>
-
-                            }
-                        </NavLink>
 
 
 
+                        <div className="hidden md:flex ">
                         {
-                            user?.uid ? <NavLink onClick={handleLogout}
-
-                                className="px-4 text-center py-2 text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
-                            >
-                                Logout
-                            </NavLink> :
-                                <>
-                                    <NavLink
-                                        to='/login'
-                                        className="px-4 mr-2 py-2 text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
-                                    >
-                                        Login
-                                    </NavLink>
-                                    <NavLink
-                                        to='/register'
-                                        className="px-4 mr-2 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
-                                    >
-                                        Register
-                                    </NavLink>
-                                </>
-
+                            user?.uid ? <Link to='/profile' onClick={handleLogout}>
+                            <div className="avatar">
+                            <div className="w-14 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                          
+                                      <img className='w-full' alt='profilePhoto' src={user?.photoURL} title={user?.displayName}></img>
+                                
+                                </div>
+                                </div>
+                            </Link> : 
+                                
+                                <Link to='/login'>
+                            
+                                          <div className="avatar">
+                                                   <div className=" rounded-full ring ring-primary ring-offset-base-100 ">
+                                                        <UserCircleIcon  className='w-14 h-14 '></UserCircleIcon>
+                                                  </div>
+                                          </div>
+                                 </Link>
                         }
-                        {/*         <div className="form-control">
-                        <label className="label cursor-pointer">
-
-                            <input type="checkbox" className="toggle toggle-secondary" />
-                        </label>
-                    </div> */}
+     
+            
                     </div>
+
+
+                    </div>
+
+
+
                 </div>
             </nav>
         </div>

@@ -119,7 +119,7 @@ const Register = () => {
     return (
         <div >
             <div className="bg-indigo-50">
-                <form onSubmit={handleSubmit} className="xl:px-20 md:px-10 sm:px-6 px-4 md:py-12 py-9 4xl:mx-auto 4xl:container md:flex items-center justify-center">
+                <form onSubmit={handleSubmit} className="md:py-12 py-9 4xl:mx-auto  md:flex items-center justify-center">
                     <div className=" md:hidden sm:mb-8 mb-6">
                         <svg width={191} height={34} viewBox="0 0 191 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
