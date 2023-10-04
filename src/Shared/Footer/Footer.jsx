@@ -17,9 +17,9 @@ const Footer = () => {
     return (
         <div>
             <div className="bg-[#1A1A1A]">
-                <div className="container px-5 md:mx-auto  py-28">
+                <div className="xl:container lg:px-20 px-5 md:mx-auto  py-28">
                      
-                    <div className="md:grid grid-cols-3">
+                    <div className="md:grid xl:grid-cols-3 grid-cols-1">
                         <div className=""><img className="w-1/2" src={logo} alt="" /></div>
                         <div className="col-span-2">
                             <p className="text-white text-xl">We are world largest and trustful blood donation center. We have been working since 1973 with a prestigious vision to helping patient to provide blood. We are working all over the world, organizing blood donation campaign to grow awareness among the people to donate blood.</p>
@@ -28,7 +28,7 @@ const Footer = () => {
 
                     <hr  className="my-20"/>
 
-                    <div className="md:grid grid-cols-3 gap-5 text-white">
+                    <div className="lg:grid xl:grid-cols-3 lg:grid-cols-2 gap-5  text-white">
                         <div className="" >
                             <h1 className="text-3xl font-medium mb-10 tracking-wider">CONTACT US</h1>
 
@@ -63,7 +63,7 @@ const Footer = () => {
 
 
 
-                        <div className="my-16 md:my-0">
+                        <div className="my-16 xl:my-0">
                             <h1 className="text-3xl font-medium mb-10 tracking-wider">SUPPORT LINKS</h1>
 
                             

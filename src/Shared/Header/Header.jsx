@@ -30,7 +30,7 @@ const Header = () => {
             <HeaderTop></HeaderTop>
 
             <nav className=" bg-white shadow py-4 sticky top-0 z-50">
-                <div className="md:container mx-10 md:mx-auto justify-between  md:items-center md:flex ">
+                <div className="xl:container lg:px-20 px-5  md:mx-auto justify-between  md:items-center md:flex ">
                     <div>
                         <div className="flex items-center justify-between py-3 md:py-2 md:block">
                             <NavLink to='/'>
@@ -82,7 +82,7 @@ const Header = () => {
                             className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"
                                 }`}
                         >
-                            <ul className="items-center text-lg font-semibold uppercase justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+                            <ul className="items-center xl:text-lg font-semibold uppercase justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                                 <li className="text-black hover:text-[#0EA5E9]">
                                     <NavLink to='/'>Home</NavLink>
                                 </li>

@@ -7,25 +7,25 @@ import { Link } from 'react-router-dom';
 
 const HeaderTop = () => {
     return (
-        <div className='hidden md:block py-4 bg-[#EF3D32]'>
+        <div className='hidden xl:block py-4 bg-[#EF3D32] '>
            
-            <div className='md:container md:mx-auto md:flex  justify-between'>
+            <div className='md:container md:px-20 px-0 md:mx-auto md:flex  justify-between'>
             
-                <div className='md:flex gap-5 text-white font-medium tracking-wide'>
-                <div className='flex gap-2'>
-                <ClockIcon className='h-6 w-6 text-black-500'></ClockIcon>
-                <h3>24 HOUR SERVICES - 7 DAYS A WEEK</h3>
-            </div>
-            <div className='flex gap-2'>
-                        <MapPinIcon className='h-6 w-6 text-black-500'></MapPinIcon>
-                        <Link to="https://maps.app.goo.gl/eDPzeVWPQj8UjMu19" target="_blank">
-                           <h3>NEWTOWN 7 NO. DINAJPUR SADAR, DINAJPUR</h3>
-                        </Link>
-            </div>
-            <div className='flex gap-2'>
-                <EnvelopeIcon className='h-6 w-6 text-black-500'></EnvelopeIcon>
-                <h3><a href="mailto:shijan135@gmail.com"> FREELANCERSHIJAN@GMAIL.COM</a> </h3>
-            </div>
+                <div className='md:flex gap-5 text-white text-sm lg:text-md font-medium tracking-wide'>
+                        <div className='flex items-center gap-2'>
+                                <ClockIcon className='lg:h-5 lg:w-5 h-4 w-4 text-black-500'></ClockIcon>
+                                <h3 className=''>24 HOUR SERVICES - 7 DAYS A WEEK</h3>
+                        </div>
+                            <div className='flex items-center gap-2'>
+                                        <MapPinIcon className='lg:h-5 lg:w-5 h-4 w-4 text-black-500'></MapPinIcon>
+                                        <Link to="https://maps.app.goo.gl/eDPzeVWPQj8UjMu19" target="_blank">
+                                        <h3>NEWTOWN 7 NO. DINAJPUR SADAR, DINAJPUR</h3>
+                                        </Link>
+                            </div>
+                            <div className='flex items-center gap-2'>
+                                <EnvelopeIcon className='lg:h-5 lg:w-5 h-4 w-4 text-black-500'></EnvelopeIcon>
+                                <h3><a href="mailto:shijan135@gmail.com"> FREELANCERSHIJAN@GMAIL.COM</a> </h3>
+                            </div>
                 </div>
 
             <div className='flex justify-center gap-2'>

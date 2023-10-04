@@ -70,13 +70,13 @@ const HomeSlider = () => {
         className="absolute hidden group-hover:block top-1/2 left-4 transform -translate-y-1/2 p-2 "
         onClick={prevSlide}
       >
-        <IoIosArrowBack className="md:w-20 w-10 h-10 md:h-20 text-white hover:text-[#EF3D32] transition-color duration-500" />
+        <IoIosArrowBack className="xl:w-20 md:w-14 md:h-14 w-10 h-10 xl:h-20 text-white hover:text-[#EF3D32] transition-color duration-500" />
       </button>
       <button
         className="absolute hidden group-hover:block top-1/2 right-4 transform -translate-y-1/2 p-2 "
         onClick={nextSlide}
       >
-         <IoIosArrowForward className="md:w-20 w-10 h-10 md:h-20 text-white hover:text-[#EF3D32] transition-color duration-500" />
+         <IoIosArrowForward className="xl:w-20 md:w-14 md:h-14 w-10 h-10 xl:h-20 text-white hover:text-[#EF3D32] transition-color duration-500" />
       </button>
     
 
