@@ -17,8 +17,10 @@ const HeaderTop = () => {
                 <h3>24 HOUR SERVICES - 7 DAYS A WEEK</h3>
             </div>
             <div className='flex gap-2'>
-                <MapPinIcon className='h-6 w-6 text-black-500'></MapPinIcon>
-                <h3>NEWTOWN 7 NO. DINAJPUR SADAR, DINAJPUR</h3>
+                        <MapPinIcon className='h-6 w-6 text-black-500'></MapPinIcon>
+                        <Link to="https://maps.app.goo.gl/eDPzeVWPQj8UjMu19" target="_blank">
+                           <h3>NEWTOWN 7 NO. DINAJPUR SADAR, DINAJPUR</h3>
+                        </Link>
             </div>
             <div className='flex gap-2'>
                 <EnvelopeIcon className='h-6 w-6 text-black-500'></EnvelopeIcon>

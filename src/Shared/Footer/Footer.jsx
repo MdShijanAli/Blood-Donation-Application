@@ -43,10 +43,12 @@ const Footer = () => {
                             <div className="flex gap-8 items-center my-6">
                                        <MapPinIcon className='h-6 w-6 text-[#B83332]' />
                               
-                                        <div className="text-xl ">
-                                                <p className="hover:text-[#B83332]">Newtown-7 no, Dinajpur Sadar</p>
+                                <div className="text-xl ">
+                                    <Link to="https://maps.app.goo.gl/eDPzeVWPQj8UjMu19" target="_blank">
+                                                <p className="hover:text-[#B83332]">Newtown-7 no, Dinajpur Sadar,</p>
                                                 <p className="hover:text-[#B83332]">Dinajpur-5200, Bangladesh</p>
-                                        </div>
+                                    </Link>       
+                                </div>
                             </div>
 
                             <div className="flex gap-8 items-center">
